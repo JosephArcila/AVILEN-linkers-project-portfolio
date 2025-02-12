@@ -2,43 +2,54 @@
 *December 2024 - February 2025*
 
 ## Overview
-This repository documents my work as an AI Developer at AVILEN on the Linkers project, focused on evaluating and implementing an automated technical research system.
+This repository documents my work as an AI Developer at AVILEN, where I implemented an automated research system based on the STORM architecture. The system generates comprehensive research reports in Japanese by gathering and synthesizing information from academic papers, patents, and web sources.
 
 ## Project Phases
+
 ### Phase 1: Technology Evaluation (December 2024)
-- Conducted comprehensive assessment of AI technologies
-- Evaluated various search APIs and agent frameworks
-- Documented testing results and capabilities
+- Led evaluation of various AI technologies and search APIs
+- Created systematic assessment framework
+- Documented capabilities and limitations of different approaches
 
 ### Phase 2: Implementation & Testing (January-February 2025)
-- Implemented STORM architecture with specialized search APIs:
-  * OpenAlex API for academic papers
-  * SerpAPI for Google Patents
-  * DuckDuckGo for web search
-- Created comprehensive documentation in both English and Japanese
-- Conducted experimental testing across diverse topics
+- Implemented STORM architecture with Japanese language support
+- Created separate implementations for different data sources:
+  * Academic paper research using OpenAlex API
+  * Patent information search using SerpAPI
+  * Web information search using DuckDuckGo
+- Documented system design and results in both Japanese and English
 
 ## Repository Structure
 ```
 project/
-├── technology-evaluation/
-│   ├── evaluation-summary.md        # Comprehensive technology assessment
-│   └── experiments/                 # Key technology experiments
+├── technology-evaluation/          # Technology assessment documentation
+│   ├── evaluation-summary.md      # Comprehensive results
+│   └── experiments/              # Individual test cases
 └── implementation/
-    ├── storm-adaptation.md         # STORM architecture modifications
-    └── experimental-outputs/       # Successful implementations
+    ├── storm-architecture.md     # System design & implementation
+    └── experimental-outputs/     # Test results and outputs
 ```
 
-## Technologies Used
-- LangGraph for AI agent orchestration
-- OpenAI GPT models for text generation
-- Python for implementation
-- Multiple specialized search APIs
+## Key Features
+- Japanese language support throughout the system
+- Modular search implementations for different source types
+- Multi-perspective research approach
+- Automated citation management
+- Structured data handling using Pydantic
 
-## Test Results
-Successfully generated test research reports on topics including:
-- Exosome research trends
-- CO2 absorption using amines
-- Behavioral change methods
-- Cooking appliance innovations
-- Hair drying technologies
+## Technologies Used
+- AI/ML: LangGraph, OpenAI GPT models
+- Search APIs:
+  * OpenAlex API for academic papers
+  * SerpAPI for Google Patents
+  * DuckDuckGo for web search
+- Development: Python, Pydantic
+- Documentation: Bilingual (Japanese/English)
+
+## Test Topics
+System tested with topics including:
+- エクソソームの研究のトレンド (Exosome Research Trends)
+- アミンを用いた固体状のCO2吸着剤のトレンド (CO2 Absorption Technologies)
+- 熱・風以外の方法で髪の毛を乾かす技術のトレンド (Novel Hair Drying Technologies)
+- 安全に関する行動変容手法のトレンド (Behavioral Change Methods)
+- 加熱調理器における料理品質・体験・機能に関する開発のトレンド (Cooking Appliance Innovations)
