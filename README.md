@@ -28,7 +28,6 @@ AVILEN-linkers-project-portfolio/
 ├── README.md                              # Main project README
 ├── technology-evaluation/
 │   ├── README.md                          # Was evaluation-summary.md
-│   └── experiments/                      
 └── implementation/
     ├── README.md                          # Was storm-architecture.md
     └── experimental-outputs/
