@@ -6,38 +6,36 @@ I implemented an automated research system based on the STORM (Synthesis of Topi
 ## System Architecture
 ![STORM Architecture Diagram](/images/storm-architecture.png)
 
-## How It Works
+## System Flow with Intermediate Outputs
 
-### 1. Research Input
-- The system accepts a research topic in Japanese
-- Example: "エクソソームの研究のトレンド" (Exosome Research Trends)
+### Step 1: Research Input (入力トピック)
+- System accepts Japanese research topic
+- Example input: "エクソソームの研究のトレンド"
+![Step 1 Output](/images/step1_input.png)
 
-### 2. Multi-Perspective Analysis
-- The system creates different research perspectives to ensure comprehensive coverage
-- Each perspective brings unique insights to the research
-- Examples include technical experts, market researchers, and domain specialists
+### Step 2: Initial Outline Generation (初期記事アウトライン生成)
+- Creates preliminary structure for research
+- Based on LLM's initial understanding
+![Step 2 Output](/images/step2_outline.png)
 
-### 3. Information Gathering
-Created separate implementations for different source types:
-- Academic Papers: Using OpenAlex API
-- Patents: Using SerpAPI (Google Patents)
-- Web Information: Using DuckDuckGo
+### Step 3-4: Perspective Generation (関連トピック生成 & N個の異なる視点を生成)
+- Creates diverse research perspectives
+- Each perspective brings unique insights
+![Step 3-4 Output](/images/step3_4_perspectives.png)
 
-### 4. Expert Dialogue Simulation
-- Simulates research conversations between:
-  * A researcher asking specific questions
-  * An expert providing detailed, cited answers
-- All responses include proper citations
-- Creates structured information gathering
+### Step 5-8: Information Gathering Through Dialog
+- Expert conversations simulated
+- Questions generated from each perspective
+- Information gathered with citations
+![Step 5-8 Output](/images/step5_8_dialog.png)
 
-### 5. Report Generation
-Based on the prompts in the implementation:
-- Generates initial outline
-- Refines outline based on gathered information
-- Creates sections with cited content
-- Maintains professional Japanese writing style
+### Step 9-12: Report Generation and Refinement
+- Final report assembly
+- Citation integration
+- Professional formatting
+![Step 9-12 Output](/images/step9_12_final.png)
 
-## Key Features
+## Implementation Details
 
 ### Japanese Language Support
 - Complete Japanese language integration
