@@ -23,38 +23,6 @@ Technologies were evaluated based on three key metrics:
 - Level 3: Interactive reports with user feedback
 - Level 4: Self-learning capabilities
 
-## Technology Categories
-
-### 1. One-Shot Execution (一括実行)
-Systems performing search, structuring, and summarization in single flow:
-- TXYZ
-- Consensus
-- Deep Research
-
-### 2. Search-Only Technologies (検索のみ)
-Specialized search APIs for different types of sources:
-
-Academic Papers:
-- OpenAlex
-- Scopus
-- OpenCitations
-- JDreamIII
-
-Patents:
-- SerpAPI (Google Patents)
-- Ambercite
-- PatentField
-
-Web Search:
-- DuckDuckGo
-- Tavily AI
-
-### 3. AI Agent Frameworks (AIエージェントフレームワーク)
-Frameworks for building research automation:
-- LangGraph
-- AutoGen
-- CrewAI
-
 ## Technology Matrix
 ![Technology Evaluation Matrix](/images/tech_evaluation_matrix.png)
 
@@ -90,22 +58,19 @@ Selected for:
 - Japanese language support
 - Integration capabilities with multiple APIs
 
-## Evaluation Process
+## Experimental Testing
 
-### Testing Methodology
-1. Document capabilities and limitations
-2. Test with Japanese language inputs
-3. Evaluate processing time and efficiency
-4. Assess output quality and structure
-5. Check integration capabilities
+### Diffbot Evaluation
+![Diffbot Test](/images/diffbot_test.png)
 
-### Key Requirements Verified
-- Commercial usage feasibility
-- API reliability and stability
-- Japanese language support
-- Cost structure and limits
-- Integration complexity
-- Documentation quality
+### Tavily Evaluation
+![Tavily Test](/images/tavily_test.png)
+
+### LangGraph Evaluation
+![LangGraph Test](/images/langgraph_test.png)
+
+### Haystack Evaluation
+![Haystack Test](/images/haystack_test.png)
 
 ## Implementation Considerations
 
@@ -120,16 +85,3 @@ Selected for:
 - Rate limits
 - Free tier availability
 - Scaling considerations
-
-### Documentation Requirements
-- Implementation guides
-- API documentation
-- Code examples
-- Support resources
-
-## Experimental Results
-Detailed test results for individual technologies can be found in the `/experiments` directory, including:
-- Individual technology evaluations
-- Performance metrics
-- Integration test results
-- Output quality assessments
