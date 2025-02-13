@@ -23,13 +23,14 @@ This repository documents my work as an AI Developer at AVILEN, where I implemen
 
 ## Repository Structure
 ```
-project/
-├── technology-evaluation/          # Technology assessment documentation
-│   ├── evaluation-summary.md      # Comprehensive results
-│   └── experiments/              # Individual test cases
+AVILEN-linkers-project-portfolio/
+├── README.md                              # Main project README
+├── technology-evaluation/
+│   ├── README.md                          # Was evaluation-summary.md
+│   └── experiments/                      
 └── implementation/
-    ├── storm-architecture.md     # System design & implementation
-    └── experimental-outputs/     # Test results and outputs
+    ├── README.md                          # Was storm-architecture.md
+    └── experimental-outputs/
 ```
 
 ## Key Features
