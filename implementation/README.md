@@ -1,39 +1,77 @@
 # STORM Architecture Implementation
 
 ## Overview
-I implemented an automated research system based on the STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking) architecture. The system automatically gathers information and generates comprehensive research reports in Japanese.
+I implemented an automated research system based on the STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking) architecture. The system automatically gathers information from multiple sources and generates comprehensive research reports in Japanese.
 
 ## System Architecture
 ![STORM Architecture Diagram](/images/storm-architecture-jp.png)
 
-## System Flow with Intermediate Outputs
+## System Flow with Example Outputs
 
-### Step 1: Research Input (入力トピック)
-- System accepts Japanese research topic
-- Example input: "エクソソームの研究のトレンド"
-![Step 1 Output](/images/step1_input.png)
+### Step 2: Initial Outline Generation
+The system generates a preliminary structure for the research topic. Example output:
 
-### Step 2: Initial Outline Generation (初期記事アウトライン生成)
-- Creates preliminary structure for research
-- Based on LLM's initial understanding
-![Step 2 Output](/images/step2_outline.png)
+```markdown
+# エクソソーム研究のトレンド
 
-### Step 3-4: Perspective Generation (関連トピック生成 & N個の異なる視点を生成)
-- Creates diverse research perspectives
-- Each perspective brings unique insights
-![Step 3-4 Output](/images/step3_4_perspectives.png)
+## 概要
+エクソソームとは、細胞が分泌する直径30～150nm程度の小胞であり、タンパク質やリポイド、核酸など多様な生体分子を含む。細胞間情報伝達に重要な役割を果たすと考えられ、がん研究や再生医療など幅広い分野で注目されている。本節ではエクソソームの基本的な特徴と、研究分野全体のトレンドを概観する。
 
-### Step 5-8: Information Gathering Through Dialog
-- Expert conversations simulated
-- Questions generated from each perspective
-- Information gathered with citations
-![Step 5-8 Output](/images/step5_8_dialog.png)
+[... truncated for brevity ...]
+```
 
-### Step 9-12: Report Generation and Refinement
-- Final report assembly
-- Citation integration
-- Professional formatting
-![Step 9-12 Output](/images/step9_12_final.png)
+### Step 3: Related Topics Generation
+The system identifies related topics for research. Example output:
+
+```python
+RelatedSubjects(topics=[
+    'エクソソーム: https://ja.wikipedia.org/wiki/エクソソーム',
+    '細胞外小胞: https://ja.wikipedia.org/wiki/細胞外小胞',
+    'マイクロベシクル: https://ja.wikipedia.org/wiki/マイクロベシクル',
+    [... other topics ...]
+])
+```
+
+### Step 4: Expert Perspectives Generation
+Creates different research perspectives. Example output:
+
+```python
+{
+    'editors': [{
+        'affiliation': 'Research Institute A',
+        'name': 'Alice123',
+        'role': 'Research Scientist',
+        'description': 'Alice is a research scientist specializing in the study of exosomes...'
+    },
+    # Additional editors...
+    ]
+}
+```
+
+### Step 6: Query Generation
+Generates search queries based on the research topic. Example output:
+
+```python
+[
+    'exosomes AND "latest research" AND "hot topics"',
+    'exosomes AND therapeutics AND (cancer OR oncology) AND "clinical applications"',
+    'exosomes AND liquid biopsy AND biomarkers AND (cancer OR "neurodegenerative diseases")',
+    # Additional queries...
+]
+```
+
+### Step 7: Expert Response Generation
+Generates detailed responses with citations. Example output:
+
+```markdown
+今後5年から10年にかけて、エクソソーム研究はがん治療・診断だけでなく、再生医療や希少疾患に対する革新的治療法の新規開発など、より幅広い応用へと展開していくと考えられています[1]。
+
+[... content with citations ...]
+
+参考文献：
+[1]: https://www.science.org/doi/10.1126/science.aau6977
+[... additional references ...]
+```
 
 ## Implementation Details
 
