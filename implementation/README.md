@@ -4,7 +4,7 @@
 I implemented an automated research system based on the STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking) architecture. The system automatically gathers information and generates comprehensive research reports in Japanese.
 
 ## System Architecture
-![STORM Architecture Diagram](/images/storm-architecture.png)
+![STORM Architecture Diagram](/images/storm-architecture-jp.png)
 
 ## System Flow with Intermediate Outputs
 
