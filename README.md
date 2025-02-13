@@ -4,7 +4,8 @@
 ## Overview
 This repository documents my work as an AI Developer at AVILEN, where I implemented an automated research system based on the STORM architecture. The system generates comprehensive research reports in Japanese by gathering and synthesizing information from academic papers, patents, and web sources.
 
-![STORM Architecture Overview](/images/storm-architecture.png)
+![STORM Architecture Overview](/images/storm-architecture-jp.png)
+![STORM Architecture Overview](/images/storm-architecture-en.png)
 
 ## Project Phases
 
