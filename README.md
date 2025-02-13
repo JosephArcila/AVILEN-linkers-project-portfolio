@@ -25,11 +25,15 @@ This repository documents my work as an AI Developer at AVILEN, where I implemen
 ## Repository Structure
 ```
 AVILEN-linkers-project-portfolio/
-├── README.md                              # Main project README
+├── images/
+├── notebooks/
+│   ├── Topic3_Scholarly_Research_STORM.ipynb
+│   └── Combined_Search_Implementation.ipynb
+├── README.md
 ├── technology-evaluation/
-│   ├── README.md                          # Was evaluation-summary.md
+│   └── README.md
 └── implementation/
-    ├── README.md                          # Was storm-architecture.md
+    ├── README.md
     └── experimental-outputs/
 ```
 
